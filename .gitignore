@@ -9,8 +9,6 @@ __pycache__/
 # Django Migrations
 */migrations/*
 
-# PyCharm
-.idea/
 
 
 
