@@ -6,49 +6,50 @@
 
 Получение списка категорий ✅
 
-path('categories/', CategoryListAPIView.as_view(), name='category-list'),
+    path('categories/', CategoryListAPIView.as_view(), name='category-list'),
 
 Конкретная категория ✅
 
-path('categories/<int:id>/', CategoryDetailAPIView.as_view(), name='category-detail'),
+    path('categories/<int:id>/', CategoryDetailAPIView.as_view(), name='category-detail'),
 
 # Продукты
 
 Список всех продуктов ✅
 
-path('products/', ProductListAPIView.as_view(), name='product-list'),
+    path('products/', ProductListAPIView.as_view(), name='product-list'),
 
 Детали продукта ✅
 
-path('products/<int:id>/', ProductDetailAPIView.as_view(), name='product-detail'),
+    path('products/<int:id>/', ProductDetailAPIView.as_view(), name='product-detail'),
 
 Поиск продуктов ✅
 
-path('products/search/', ProductSearchAPIView.as_view(), name='product-search'),
+    path('products/search/', ProductSearchAPIView.as_view(), name='product-search'),
 
 # Корзина
 
 Получение всех товаров в корзине ✅
 
-path('cart/', CartListAPIView.as_view(), name='cart-list'),
+    path('cart/', CartListAPIView.as_view(), name='cart-list'),
 
 Добавление товара в корзину ✅
 
-path('cart/add/', CartAddAPIView.as_view(), name='cart-add'),
+    path('cart/add/', CartAddAPIView.as_view(), name='cart-add'),
 
 Обновление количества товара в корзине ❌
 
-path('cart/<int:id>/', CartUpdateAPIView.as_view(), name='cart-update'),
+    path('cart/<int:id>/', CartUpdateAPIView.as_view(), name='cart-update'),
 
 Удаление товара из корзины ✅
 
-path('cart/<int:id>/delete/', CartDeleteAPIView.as_view(), name='cart-delete'),
+    path('cart/<int:id>/delete/', CartDeleteAPIView.as_view(), name='cart-delete'),
 
 # Заказ
 
 Оформление заказа ❌
 
-path('order/', OrderCreateAPIView.as_view(), name='order-create'),
+    path('order/', OrderCreateAPIView.as_view(), name='order-create'),
+
 
 # Склонируйте репозиторий: bash
 
