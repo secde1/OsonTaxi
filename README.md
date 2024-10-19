@@ -1,30 +1,43 @@
-# 🛒 WebApp API Documentation
-
 # Это документация для **WebApp**,
 
 # REST API, которое предоставляет функционал для работы с категориями продуктов, корзиной и заказами.
 
 # Категории
 
-path('categories/', CategoryListAPIView.as_view(), name='category-list'), # Получение списка категорий ✅
-path('categories/<int:id>/', CategoryDetailAPIView.as_view(), name='category-detail'), # Конкретная категория ✅
+Получение списка категорий ✅
+path('categories/', CategoryListAPIView.as_view(), name='category-list'),
+
+Конкретная категория ✅
+path('categories/<int:id>/', CategoryDetailAPIView.as_view(), name='category-detail'),
 
 # Продукты
 
-path('products/', ProductListAPIView.as_view(), name='product-list'), # Список всех продуктов ✅
-path('products/<int:id>/', ProductDetailAPIView.as_view(), name='product-detail'), # Детали продукта ✅
-path('products/search/', ProductSearchAPIView.as_view(), name='product-search'), # Поиск продуктов ✅
+Список всех продуктов ✅
+path('products/', ProductListAPIView.as_view(), name='product-list'),
+
+Детали продукта ✅
+path('products/<int:id>/', ProductDetailAPIView.as_view(), name='product-detail'),
+
+Поиск продуктов ✅
+path('products/search/', ProductSearchAPIView.as_view(), name='product-search'),
 
 # Корзина
 
-path('cart/', CartListAPIView.as_view(), name='cart-list'), # Получение всех товаров в корзине ✅
-path('cart/add/', CartAddAPIView.as_view(), name='cart-add'), # Добавление товара в корзину ✅
-path('cart/<int:id>/', CartUpdateAPIView.as_view(), name='cart-update'), # Обновление количества товара в корзине
-path('cart/<int:id>/delete/', CartDeleteAPIView.as_view(), name='cart-delete'), # Удаление товара из корзины ✅
+Получение всех товаров в корзине ✅
+path('cart/', CartListAPIView.as_view(), name='cart-list'),
+
+Добавление товара в корзину ✅
+path('cart/add/', CartAddAPIView.as_view(), name='cart-add'),
+
+Обновление количества товара в корзине
+path('cart/<int:id>/', CartUpdateAPIView.as_view(), name='cart-update'),
+
+Удаление товара из корзины ✅
+path('cart/<int:id>/delete/', CartDeleteAPIView.as_view(), name='cart-delete'),
 
 # Заказ
-
-path('order/', OrderCreateAPIView.as_view(), name='order-create'), # Оформление заказа
+Оформление заказа ❌
+path('order/', OrderCreateAPIView.as_view(), name='order-create'),
 
 # Склонируйте репозиторий: bash
 
