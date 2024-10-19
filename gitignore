@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+
+# Environments
+.env
+.venv/
+
+# Django Migrations
+*/migrations/*
+
+# PyCharm
+.idea/
+
+
+
+
