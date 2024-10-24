@@ -60,13 +60,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'webapp.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASS'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
     }
 }
 
@@ -103,6 +104,7 @@ JAZZMIN_SETTINGS = {
     "site_brand": "Oson Taxi",
     "site_icon": "images/favicon.png",
     "site_logo": None,
+
     "welcome_sign": "Welcome to the Oson Taxi!",
     "copyright": "Jamshid Turgunov",
     "user_avatar": None,
